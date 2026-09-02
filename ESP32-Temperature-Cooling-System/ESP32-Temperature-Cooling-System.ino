@@ -16,7 +16,7 @@
 // pin 4 reads from DS18B20 sensor 
 // pin 16 controls fan pin
 #define ONE_WIRE_BUS 4    // DS18B20 Data Pin -> GPIO 4
-#define FAN_PIN      16   // MOSFET Gate Pin -> GPIO 16
+#define FAN_PIN      18   // MOSFET Gate Pin -> GPIO 16
 
 // OLED Screen Configuration
 #define SCREEN_WIDTH 128
@@ -32,8 +32,8 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 
 // Threshold values
-const float TEMP_ON  = 30.0; // Turn fan ON when temp reaches/exceeds 30.0°C
-const float TEMP_OFF = 27.0; // Turn fan OFF when temp drops to/below 27.0°C
+const float TEMP_ON  = 25; // Turn fan ON when temp reaches/exceeds 30.0°C
+const float TEMP_OFF = 23; // Turn fan OFF when temp drops to/below 27.0°C
 
 bool fanState = false;
 
