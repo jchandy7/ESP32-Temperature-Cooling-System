@@ -12,7 +12,7 @@ An embedded IoT project built using the ESP32 microcontroller to monitor real-ti
 ## Key Features & Technical Concepts
 
 * **Closed-Loop Feedback Control:** Real-time temperature acquisition and automated switching output.
-* **Hysteresis Logic:** Dual-threshold control (30°C ON / 27°C OFF) to eliminate state chatter and extend actuator hardware life.
+* **Hysteresis Logic:** Dual-threshold control (25°C ON / 23°C OFF) to eliminate state chatter and extend actuator hardware life.
 * **Visual Telemetry:** Live temperature readout and actuator status updating on a 128x64 I2C OLED display.
 * **Power Isolation:** Low-voltage gate driver configuration using an IRLZ44N N-channel MOSFET to safely isolate microcontroller logic (3.3V) from high-current DC motor loads (5V).
 
