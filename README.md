@@ -5,7 +5,7 @@ Copy everything in the block below, paste it into your README.md file in Notepad
 Markdown
 # ESP32 Temperature-Controlled Cooling System with Hysteresis
 
-An embedded IoT project built using the ESP32 microcontroller to monitor real-time ambient temperature and dynamically regulate a cooling fan. The system utilizes hysteresis control logic to ensure operational stability and prevent rapid switching near trigger thresholds.
+An embedded IoT project built using the ESP32 microcontroller to monitor real-time temperature and dynamically regulate a cooling fan. The system utilizes hysteresis control logic to ensure operational stability and prevent rapid switching near trigger thresholds.
 
 ---
 
@@ -45,6 +45,6 @@ An embedded IoT project built using the ESP32 microcontroller to monitor real-ti
 1. **Initialization:** The ESP32 initializes I2C bus communications, the OLED display, and 1-wire protocol drivers.
 2. **Data Acquisition:** The DS18B20 samples real-time environmental thermal data every second.
 3. **Threshold Processing (Hysteresis):**
-   * If `Temperature >= 30.0°C`, the MOSFET Gate toggles HIGH, turning **ON** the cooling fan.
-   * The fan remains active as temperature drops until `Temperature <= 27.0°C`, at which point the Gate toggles LOW to turn **OFF** the fan.
+   * If `Temperature >= 25.0°C`, the MOSFET Gate toggles HIGH, turning **ON** the cooling fan.
+   * The fan remains active as temperature drops until `Temperature <= 23.0°C`, at which point the Gate toggles LOW to turn **OFF** the fan.
 4. **Telemetry Display:** Temperature values and state flags (`Fan: ON/OFF`) render on
